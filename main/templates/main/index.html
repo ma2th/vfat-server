@@ -1,0 +1,77 @@
+<!--
+Copyright 2019 Matthias Ring
+Machine Learning and Data Analytics Lab
+Friedrich-Alexander-University Erlangen-Nuremberg
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'base_jumbotron.html' %}
+
+<div class="row">
+    <div class="col-md-4 pb-3">
+        <div class="card border-secondary h-100">
+            <div class="card-header font-weight-bold">Assessment</div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">View your visual field's assessments and its progression over time.</p>
+                <div class="mt-auto">
+
+                    <a href="{% url 'assessment:index' %}" class="btn btn-primary btn-block">
+                        <i class="fas fa-clipboard"></i> Assessments
+                    </a>
+
+                    <a href="{% url 'stats:index' %}" class="btn btn-primary btn-block">
+                        <i class="fas fa-chart-bar"></i> Progression
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 pb-3">
+        <div class="card border-secondary h-100">
+            <div class="card-header font-weight-bold">Training</div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">Use perceptual learning to improve or even restore visual field deficits.</p>
+                <div class="mt-auto">
+                    <a href="{% url 'train:index' %}" class="btn btn-primary btn-block">
+                        <i class="fab fa-flipboard"></i> Improvable Regions
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 pb-3">
+        <div class="card border-secondary h-100">
+            <div class="card-header font-weight-bold">Settings</div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">Configure settings of the smartphone app and manage your account.</p>
+                <div class="mt-auto">
+                    <a href="{% url 'clientconf:index' %}" class="btn btn-primary btn-block">
+                        <i class="fas fa-mobile"></i> Smartphone App
+                    </a>
+                    <a href="{% url 'delete' %}" class="btn btn-primary btn-block">
+                        <i class="fas fa-user"></i> Delete Account
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

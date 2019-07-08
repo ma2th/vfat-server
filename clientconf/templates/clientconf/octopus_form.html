@@ -1,0 +1,174 @@
+<!--
+Copyright 2019 Matthias Ring
+Machine Learning and Data Analytics Lab
+Friedrich-Alexander-University Erlangen-Nuremberg
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    <div class="form-row">
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.name.label_tag}}
+        </div>
+        <div class="col-md-5 col-lg-7">
+            {{ form.name }}
+        </div>
+        <div class="col-md-1 col-lg-1 col-form-label">
+            {{form.eye.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-1">
+            {{ form.eye }}
+        </div>
+    </div>
+
+    {% if form.name.errors or form.eye.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.name.errors}}
+        {{form.eye.errors}}
+    </div>
+    {% endif %}
+
+      <div class="form-row">
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.thresholds.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.thresholds }}
+        </div>
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.stimulus_size.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.stimulus_size }}
+        </div>
+    </div>
+
+    {% if form.thresholds.errors or stimulus_size.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.thresholds.errors}}
+        {{form.stimulus_size.errors}}
+    </div>
+    {% endif %}
+
+    <div class="form-row">
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.display_time.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.display_time }}
+        </div>
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.blind_spot_tests.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.blind_spot_tests }}
+        </div>
+    </div>
+
+    {% if form.display_time.errors or form.blind_spot_tests.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.display_time.errors}}
+        {{form.blind_spot_tests.errors}}
+    </div>
+    {% endif %}
+
+    <div class="form-row">
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.min_waiting_time.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.min_waiting_time }}
+        </div>
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.max_waiting_time.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.max_waiting_time }}
+        </div>
+    </div>
+
+    {% if form.min_waiting_time.errors or form.max_waiting_time.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.min_waiting_time.errors}}
+        {{form.max_waiting_time.errors}}
+    </div>
+    {% endif %}
+
+    <div class="form-row">
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.min_response_time.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.min_response_time }}
+        </div>
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.max_response_time.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.max_response_time }}
+        </div>
+    </div>
+
+    {% if form.min_response_time.errors or form.max_response_time.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.min_response_time.errors}}
+        {{form.max_response_time.errors}}
+    </div>
+    {% endif %}
+
+    <div class="form-row">
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.assessment_color.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.assessment_color }}
+        </div>
+        <div class="col-md-4 col-lg-3 col-form-label">
+            {{form.fixation_color.label_tag}}
+        </div>
+        <div class="col-md-2 col-lg-3">
+            {{ form.fixation_color }}
+        </div>
+    </div>
+
+    {% if form.assessment_color.errors or form.fixation_color.errors %}
+    <div class="alert alert-danger" role="alert">
+        {{form.assessment_color.errors}}
+        {{form.fixation_color.errors}}
+    </div>
+    {% endif %}
+
+    <div class="form-row py-3">
+        {% if submit_label %}
+        <div class="px-1">
+            <input class="btn btn-primary" type="submit" value="{{submit_label}}"/>
+        </div>
+        {% endif %}
+
+        {% if cancel_label %}
+        <div class="px-1">
+            <a href="{{cancel_href}}" class="btn btn-info">{{cancel_label}}</a>
+        </div>
+        {% endif %}
+
+        {% if delete_label %}
+        <div class="px-1">
+            <a href="{{delete_href}}" class="btn btn-danger">{{delete_label}}</a>
+        </div>
+        {% endif %}
+    </div>
+</form>

@@ -1,0 +1,115 @@
+<!--
+Copyright 2019 Matthias Ring
+Machine Learning and Data Analytics Lab
+Friedrich-Alexander-University Erlangen-Nuremberg
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'base_jumbotron.html' %}
+
+<div class="row pb-3">
+    <div class="col-md-4 pb-3">
+        <div class="card border-secondary h-100">
+            <div class="card-header font-weight-bold">Examine Your Visual Field</div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">Perform visual field examinations using your smartphone and a virtual reality (VR)
+                    headset.</p>
+                <a href="#visual-field-details" style="margin-top: auto;">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 pb-3">
+        <div class="card border-secondary h-100">
+            <div class="card-header font-weight-bold">Improve Visual Deficits</div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">Use perceptual learning and simple repetitive exercises to improve (or even
+                    recover) your visual field.</p>
+                <a href="#training" style="margin-top: auto;">Learn more</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 pb-3">
+        <div class="card border-secondary h-100">
+            <div class="card-header font-weight-bold">Free and Open Source</div>
+            <div class="card-body d-flex flex-column">
+                <p class="card-text">The <a href="https://github.com/ma2th/vfat-app">smartphone app</a> as well as the <a href="https://github.com/ma2th/vfat-server">server</a> are freely available as open source
+                    software on GitHub.</p>
+                <a href="#open-source" style="margin-top: auto;">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 id="visual-field-details">Examine Your Visual Field</h2>
+<div class="row py-3">
+    <div class="col-md-6 py-3">
+        <img src="/static/main/visual_fields.jpg" class="img-responsive"/>
+    </div>
+    <div class="col-md-6 my-auto">
+        <p>Perform continuous home monitoring of your visual field.</p>
+        <p>Measure equidistantly-sampled visual fields (left image) or Octopus G1-based visual fields (right
+            image).</p>
+        <p>Smartphone, virtual reality (VR) headset, and bluetooth input device required.</p>
+        <p>Online storage and evaluation of results.</p>
+    </div>
+</div>
+
+<h2 id="training">Improve Visual Deficits</h2>
+<div class="row py-3">
+    <div class="col-md-4 order-md-2 py-3">
+        <img src="/static/main/growth.jpg" class="img-responsive"/>
+    </div>
+    <div class="col-md-8 order-md-1 my-auto">
+        <p>Recover visual field defects as shown in, for example, these studies:</p>
+        <p>Mueller, Mast and Sabel. Recovery of visual field defects: A large clinical observational study using vision restoration therapy, Restorative Neurology and Neuroscience 25(5-6), pp. 563–572, 2007.</p>
+        <p>Sabel and Gudlin. Vision Restoration Training for Glaucoma - A Randomized Clinical Trial, JAMA Ophthalmologl 132(4), pp. 381-389, 2014.</p>
+    </div>
+</div>
+
+<h2 id="open-source">Free and Open Source</h2>
+<div class="row py-3">
+    <div class="col-md-3 py-3">
+        <img src="/static/main/github.jpg" class="img-responsive"/>
+    </div>
+    <div class="col-md-9 my-auto">
+        <p>The <a href="https://github.com/ma2th/vfat-app">smartphone app</a> as well as the <a href="https://github.com/ma2th/vfat-server">server</a> are freely available as open source software on
+            GitHub (after publication of the complementary research article).</p>
+        <p>The smartphone app is implemented using Unreal Engine 4 (UE4), which facilitates exporting the app for all
+            major
+            smartphone operating systems.</p>
+    </div>
+</div>
+
+<h2 id="open-source">Screenshots of the Smartphone App</h2>
+<div class="row py-3">
+    <div class="col-md-3 py-3">
+        <img src="/static/main/app1.jpg" class="img-responsive"/>
+    </div>
+    <div class="col-md-3 py-3 my-auto">
+        <p>Login screen to upload and store visual field assessments on the VFAT server.</p>
+    </div>
+    <div class="col-md-3 py-3">
+        <img src="/static/main/app2.jpg" class="img-responsive"/>
+    </div>
+    <div class="col-md-3 py-3 my-auto">
+        <p>Program selection to start a visual field assessment or calibrate brightness.</p>
+    </div>
+</div>
+
+{% endblock %}

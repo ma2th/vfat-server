@@ -1,0 +1,13 @@
+db.sqlite3
+
+**.DS_Store
+
+**/migrations/*
+
+/media/*
+/static/*
+/non-opensource/config/*
+
+__pycache__/
+*.py[cod]
+*$py.class

@@ -1,0 +1,57 @@
+<!--
+Copyright 2019 Matthias Ring
+Machine Learning and Data Analytics Lab
+Friedrich-Alexander-University Erlangen-Nuremberg
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h3 class="pb-3">Your Assessments</h3>
+
+{% if not equidistant_left and not equidistant_right and not octopusg1_left and not octopusg1_right %}
+
+<div class="alert alert-info" role="alert">
+    No assessments available.
+</div>
+
+{% else %}
+
+{% if equidistant_left or equidistant_right %}
+
+<h4 class="pb-3">Equidistant Assessments</h4>
+
+<div class="row">
+    {% include 'assessment/index_partial_list.html' with title='Left Eye' list=equidistant_left detail_url='assessment:detail-equidistant' %}
+    {% include 'assessment/index_partial_list.html' with title='Right Eye' list=equidistant_right detail_url='assessment:detail-equidistant' %}
+</div>
+{% endif %}
+
+{% if octopusg1_left or octopusg1_right %}
+
+<h4 class="py-3">Octopus G1-Based Assessments</h4>
+
+<div class="row">
+    {% include 'assessment/index_partial_list.html' with title='Left Eye' list=octopusg1_left detail_url='assessment:detail-octopusg1'  %}
+    {% include 'assessment/index_partial_list.html' with title='Right Eye' list=octopusg1_right detail_url='assessment:detail-octopusg1'  %}
+</div>
+
+{% endif %}
+
+{% endif %}
+
+{% endblock %}

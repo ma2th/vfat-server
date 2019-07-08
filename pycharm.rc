@@ -1,0 +1,4 @@
+# Settings -> Tools -> Terminal -> Shell Path -> /bin/bash --rcfile pycharm.rc
+
+source ~/.bash_profile
+source ~/miniconda3/bin/activate vfat-server
