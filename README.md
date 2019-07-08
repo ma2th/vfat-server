@@ -1,13 +1,13 @@
 # Visual Field Assessment and Training (VFAT): Server for Mobile and Home Perimetry
 
-### Features 
+## Features 
 - Perform continuous home monitoring of your visual field
 - Measure equidistantly-sampled visual fields or Octopus G1-based visual fields
 - Online storage and evaluation of results
 - Use perceptual learning to improve (or even recover) your visual field 
 - Implemented using Unreal Engine 4 (UE4) and Google VR to facilitate exporting the app for all major smartphone operating systems
 
-### Requirements
+## Requirements
 - Smartphone
 - Virtual reality (VR) headset
 - Bluetooth input device
