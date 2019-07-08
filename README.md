@@ -6,6 +6,7 @@
 - Online storage and evaluation of results
 - Use perceptual learning to improve (or even recover) your visual field 
 - Implemented using Unreal Engine 4 (UE4) and Google VR to facilitate exporting the app for all major smartphone operating systems
+- See also [vfat.mad.tf.fau.de](https://www.vfat.mad.tf.fau.de/home/)
 
 ## Requirements
 - Smartphone
@@ -13,7 +14,7 @@
 - Bluetooth input device
 - [VFAT smartphone app](https://github.com/ma2th/vfat-app)
 
-## Configuration (Django related)
+## Configuration ([Django](https://www.djangoproject.com/) related)
 1. Create file non-opensource/config/media_root.txt and enter the full path of the media root directory for the production environment
 2. Create file non-opensource/config/static_root.txt and enter the full path of the static root directory for the production environment
 3. Create file non-opensource/config/secret_key.txt and enter the secret key
